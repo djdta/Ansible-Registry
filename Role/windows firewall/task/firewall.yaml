@@ -1,0 +1,12 @@
+---
+# This playbook uses the win_ping module to test connectivity to Windows hosts
+- name: Firewall Disabled
+  hosts: win 
+
+  tasks:
+  - name: Firewall Disabled
+    win_firewall:
+      state: disabled
+      profiles:
+      - Public
+      tags: disable_firewall
