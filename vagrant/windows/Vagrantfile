@@ -5,10 +5,11 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.cpus = 2
     vb.memory = 2048
-    vb.name = "Controller"
+    vb.name = "Windows Test VM"
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
     vb.customize ["modifyvm", :id, "--audio", "none"]
     vb.customize ["modifyvm", :id, "--accelerate3d", "off"]
+    vb.customize ["modifyvm", :id, "--iconfile", "./windows-10-png-icons-windows-10-logo-circle.png"]
     vb.customize ["modifyvm", :id, "--vram", "2"]
   end
 end
