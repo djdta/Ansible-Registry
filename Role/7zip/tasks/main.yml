@@ -1,0 +1,9 @@
+---
+
+- hosts: localhost
+  become: yes
+  tasks: 
+  - name: 💣 Ensure FireFox is lastest 💣
+    win_chocolatey:
+      name: firefoxesr
+      state: present
