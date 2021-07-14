@@ -1,0 +1,10 @@
+---
+
+- hosts: win
+  become_method: runas
+
+  tasks: 
+  - name: 💣 Ensure Git is lastest 💣
+    win_chocolatey:
+      name: git
+      state: present

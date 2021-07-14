@@ -1,0 +1,10 @@
+---
+
+- hosts: win
+  become_method: runas
+
+  tasks: 
+  - name: 💣 Install Google Chrome 💣
+    win_chocolatey:
+      name: googlechrome
+      state: present

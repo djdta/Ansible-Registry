@@ -4,7 +4,7 @@
   become_method: runas
 
   tasks: 
-  - name: 💣 Ensure FireFox is lastest 💣
+  - name: 💣 Install docker 💣
     win_chocolatey:
-      name: firefox
+      name: docker
       state: present

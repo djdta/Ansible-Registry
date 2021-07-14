@@ -1,0 +1,11 @@
+---
+
+- hosts: win
+  become_method: runas
+
+  tasks: 
+  - name: 💣 Install vault 💣
+    win_chocolatey:
+      name: vault
+      state: present
+      

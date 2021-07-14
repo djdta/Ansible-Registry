@@ -1,7 +1,7 @@
 ---
 
-- hosts: localhost
-  become: yes
+- hosts: win
+  become_method: runas
   tasks: 
   - name: 💣 Ensure FireFox is lastest 💣
     win_chocolatey:

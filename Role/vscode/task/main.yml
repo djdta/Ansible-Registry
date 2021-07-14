@@ -1,0 +1,25 @@
+---
+
+- hosts: win
+  become_method: runas
+
+  tasks: 
+  - name: 💣 Install VS Code 💣
+    win_chocolatey:
+      name: vscode-insiders
+      state: present
+   
+  - name: 💣 Install VS Code Pull Request 💣
+    win_chocolatey:
+      name: vscode-pull-request-github
+      state: present
+
+  - name: 💣 Install VS Code Icon 💣
+    win_chocolatey:
+      name: vscode-icons
+      state: present
+
+  - name: 💣 Install VS vscode-drawio 💣
+    win_chocolatey:
+      name: vscode-drawio
+      state: present
