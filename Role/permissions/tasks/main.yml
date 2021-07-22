@@ -1,0 +1,15 @@
+- name: lookup files with a certain pattern
+  find:
+    paths: /dir/tools/
+    file_type: file
+    patterns: "*.sh"
+  register: filelist
+
+- name: change permissions
+  file:
+    path: "{{ item.path }}"
+    state: file
+    owner: abc
+    group: abc
+    mode: "0775"
+  with_items: "{{ filelist.files }}"
