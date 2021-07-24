@@ -12,5 +12,6 @@ This is Readme is under developement.
 ---
 
 ```ansible
-ansible-playbook -i windows ../../Role/ping/task/main.yml 
+ansible-playbook -i windows ../../Role/ping/task/main.yml
+ansible-playbook -i linux ../../Role/ping/task/main.yml 
 ```

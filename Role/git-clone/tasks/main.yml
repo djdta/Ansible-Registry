@@ -1,0 +1,11 @@
+---
+- hosts: linux
+  become: true
+  tasks:
+    - name: Clone a github repository
+      git:
+        repo: ""
+        dest: /home/test/
+        accept_hostkey: true
+        clone: yes
+        update: yes
