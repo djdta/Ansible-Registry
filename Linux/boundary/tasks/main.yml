@@ -1,0 +1,6 @@
+---
+
+- name: Ensure file has been copied
+  hosts: localhost
+  tasks:
+  - copy: src="" dest=""
